@@ -75,7 +75,7 @@ public class MaruRSA {
     }
 
     public PublicKey getPublicKey(String filename) throws Exception {
-
+        System.out.println("gg");
         X509EncodedKeySpec spec = new X509EncodedKeySpec(decoder.decode(this.getKeyFromFile(filename)));
         KeyFactory kf = KeyFactory.getInstance("RSA");
         return kf.generatePublic(spec);
